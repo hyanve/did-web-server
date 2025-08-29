@@ -101,12 +101,14 @@ did-web-server/
 ├── main.js                      # 服务器入口文件
 ├── package.json                # 项目配置和依赖
 ├── package-lock.json           # 依赖版本锁定
-├── README.md                  # 项目说明文档
-├── .env.example               # 环境变量示例
+├── LICENSE                     # BSD 3-Clause 许可证
+├── README.md                   # 项目说明文档（英文）
+├── README.zh-CN.md             # 项目说明文档（中文）
+├── .env                        # 环境变量配置（从 .env.example 创建）
+├── .env.example                # 环境变量示例
+├── .gitignore                  # Git 忽略规则
 └── data/
-    └── did-documents/        # DID 文档存储目录
-        ├── root.json           # 根域名 DID 文档
-        └── user:*.json         # 用户 DID 文档 (自动生成)
+    └── did-documents/          # DID 文档存储目录（自动生成）
 ```
 
 ## 依赖库
@@ -332,7 +334,20 @@ curl -X POST http://localhost:8522/api/did/generate-root
 3. **使用.env文件**:
    ```bash
    cp .env.example .env
-   # 编辑.env文件中的DID_DOMAIN配置
+   # 编辑.env文件中的配置
+   ```
+
+   .env文件示例内容：
+   ```bash
+   # 服务器端口
+   PORT=8522
+   
+   # DID域名（生产环境中冒号使用%3A编码）
+   DID_DOMAIN=localhost%3A8522
+   
+   # 生产环境示例：
+   # DID_DOMAIN=yourdomain.com
+   # DID_DOMAIN=did-server.example.com
    ```
 
 ### DID文档动态域名

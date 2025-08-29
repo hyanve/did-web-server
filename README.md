@@ -101,13 +101,14 @@ did-web-server/
 ├── main.js                      # Server entry file
 ├── package.json                # Project configuration and dependencies
 ├── package-lock.json           # Dependency version lock
-├── README.md                  # Project documentation (English)
-├── README.zh-CN.md            # Project documentation (Chinese)
-├── .env.example               # Environment variable example
+├── LICENSE                     # BSD 3-Clause License
+├── README.md                   # Project documentation (English)
+├── README.zh-CN.md             # Project documentation (Chinese)
+├── .env                        # Environment variables (create from .env.example)
+├── .env.example                # Environment variable example
+├── .gitignore                  # Git ignore rules
 └── data/
-    └── did-documents/        # DID document storage directory
-        ├── root.json           # Root domain DID document
-        └── user:*.json         # User DID documents (auto-generated)
+    └── did-documents/          # DID document storage directory (auto-generated)
 ```
 
 ## Dependencies
@@ -333,7 +334,20 @@ The server supports the following environment variable configurations:
 3. **Using .env File**:
    ```bash
    cp .env.example .env
-   # Edit DID_DOMAIN configuration in .env file
+   # Edit configuration in .env file
+   ```
+
+   Example .env file content:
+   ```bash
+   # Server Port
+   PORT=8522
+   
+   # DID Domain (use %3A for colon in production)
+   DID_DOMAIN=localhost%3A8522
+   
+   # Production examples:
+   # DID_DOMAIN=yourdomain.com
+   # DID_DOMAIN=did-server.example.com
    ```
 
 ### Dynamic Domain for DID Documents
