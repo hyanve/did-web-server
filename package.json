@@ -1,0 +1,26 @@
+{
+  "name": "did-web-server",
+  "version": "1.0.0",
+  "description": "DID Web Server",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "nodemon main.js",
+    "prod": "NODE_ENV=production node main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@digitalbazaar/did-method-web": "^1.0.1",
+    "@digitalbazaar/ed25519-verification-key-2020": "^4.2.0",
+    "@digitalbazaar/x25519-key-agreement-key-2020": "^3.0.1",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.2.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "author": "九万",
+  "license": "ISC"
+}
