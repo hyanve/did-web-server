@@ -377,7 +377,7 @@ DID文档中使用`{{DOMAIN}}`占位符，服务器启动时会自动替换为�
 
 ## 许可证
 
-MIT License - 详见 [LICENSE](LICENSE) 文件
+BSD 3-Clause License - 详见 [LICENSE](LICENSE) 文件
 
 ## 相关链接
 

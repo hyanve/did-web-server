@@ -376,7 +376,7 @@ Welcome to submit Issues and Pull Requests!
 
 ## License
 
-MIT License - See [LICENSE](LICENSE) file for details
+BSD 3-Clause License - See [LICENSE](LICENSE) file for details
 
 ## Related Links
 
